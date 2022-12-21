@@ -33,7 +33,7 @@ export const Hero = () => {
               bgClip="text"
               data-aos="fade-up"
             >
-              Open-source conversational forms builder
+              Open-source conversation forms builder
             </Heading>
             <Text
               fontSize={['lg', 'xl']}
@@ -59,7 +59,7 @@ export const Hero = () => {
                 height="4rem"
                 px="2rem"
               >
-                Create a liisk for free
+                Create your liisk for free
               </Button>
             </Stack>
           </VStack>
