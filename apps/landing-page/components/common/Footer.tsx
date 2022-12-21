@@ -30,11 +30,11 @@ export const Footer = () => {
             <HStack>
               <Logo boxSize="30px" />
               <Heading as="p" fontSize="lg">
-                Typebot
+               Liiska
               </Heading>
             </HStack>
             <Text>
-              Made with ❤️ by{' '}
+              Base on this amazing project by{' '}
               <TextLink href={baptisteTwitterUrl}>@baptisteArno</TextLink>
             </Text>
           </Stack>
