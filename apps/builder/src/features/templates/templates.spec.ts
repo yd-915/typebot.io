@@ -3,10 +3,10 @@ import test, { expect } from '@playwright/test'
 import { typebotViewer } from 'utils/playwright/testHelpers'
 
 test.describe.parallel('Templates page', () => {
-  test('From scratch should create a blank typebot', async ({ page }) => {
+  test('From scratch should create a blank liisk', async ({ page }) => {
     await page.goto('/typebots/create')
     await expect(
-      page.locator('button >> text="Settings & Members"')
+      page.locator('button >> text="Personal Settings"')
     ).toBeEnabled()
     await page.click('text=Start from scratch')
     await expect(page).toHaveURL(new RegExp(`/edit`))
