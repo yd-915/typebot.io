@@ -3,7 +3,7 @@
   "createdAt": "2022-03-22T14:33:05.037Z",
   "updatedAt": "2022-03-22T16:33:37.928Z",
   "name": "Onboarding",
-  "publishedTypebotId": "cl128n64i00092e69wenv1dlx",
+  "publishedliiskaId": "cl128n64i00092e69wenv1dlx",
   "folderId": null,
   "groups": [
     {
@@ -97,7 +97,7 @@
           "groupId": "cl1267q1z000d2e6d949f2ge4",
           "options": {
             "name": "Store Name in DB",
-            "content": "postMessage({from: \"typebot\", action: \"storeName\", content: {{Name}}}, \"*\")"
+            "content": "postMessage({from: \"liiska\", action: \"storeName\", content: {{Name}}}, \"*\")"
           },
           "outgoingEdgeId": "cl12bk56s000d2e69oll3nqxm"
         }
@@ -125,18 +125,18 @@
           "type": "text",
           "groupId": "cl126ixoq000p2e6dfbz9sype",
           "content": {
-            "html": "<div>I&#x27;m super pumped that you&#x27;ve decided to try out Typebot 😍</div>",
+            "html": "<div>I&#x27;m super pumped that you&#x27;ve decided to try out Liiska</div>",
             "richText": [
               {
                 "type": "p",
                 "children": [
                   {
-                    "text": "I'm super pumped that you've decided to try out Typebot 😍"
+                    "text": "We are super excited that you've come to try out Liiska"
                   }
                 ]
               }
             ],
-            "plainText": "I'm super pumped that you've decided to try out Typebot 😍"
+            "plainText": "I'm super pumped that you've decided to try out Liiska"
           }
         },
         {
@@ -163,16 +163,16 @@
           "type": "text",
           "groupId": "cl126ixoq000p2e6dfbz9sype",
           "content": {
-            "html": "<div>Let&#x27;s get you set up for your Typebot journey.</div>",
+            "html": "<div>Let&#x27;s get you set up for your Liiska journey.</div>",
             "richText": [
               {
                 "type": "p",
                 "children": [
-                  { "text": "Let's get you set up for your Typebot journey." }
+                  { "text": "Let's get you set up for your Liiska journey." }
                 ]
               }
             ],
-            "plainText": "Let's get you set up for your Typebot journey."
+            "plainText": "Let's get you set up for your Liiska journey."
           }
         },
         {
@@ -238,7 +238,7 @@
           "groupId": "cl126jioj000u2e6dqssno3hv",
           "options": {
             "name": "Store company in DB",
-            "content": "postMessage({from: \"typebot\", action: \"storeCompany\", content: {{Company}}}, \"*\")"
+            "content": "postMessage({from: \"liiska\", action: \"storeCompany\", content: {{Company}}}, \"*\")"
           },
           "outgoingEdgeId": "cl128ag8i00162e6dufv3tgo0"
         }
@@ -254,18 +254,18 @@
           "type": "text",
           "groupId": "cl126krbp00102e6dnjelmfa1",
           "content": {
-            "html": "<div>What type of forms are you planning to build with Typebot?</div>",
+            "html": "<div>What type of forms are you planning to build with liiska?</div>",
             "richText": [
               {
                 "type": "p",
                 "children": [
                   {
-                    "text": "What type of forms are you planning to build with Typebot?"
+                    "text": "What type of forms are you planning to build with liiska?"
                   }
                 ]
               }
             ],
-            "plainText": "What type of forms are you planning to build with Typebot?"
+            "plainText": "What type of forms are you planning to build with liiska?"
           }
         },
         {
@@ -334,7 +334,7 @@
           "groupId": "cl126krbp00102e6dnjelmfa1",
           "options": {
             "name": "Store categories in DB",
-            "content": "postMessage({from: \"typebot\", action: \"storeCategories\", content: {{Categories}}}, \"*\")"
+            "content": "postMessage({from: \"liiska\", action: \"storeCategories\", content: {{Categories}}}, \"*\")"
           },
           "outgoingEdgeId": "cl128azam00182e6dct61k7v5"
         }
@@ -368,7 +368,7 @@
           "groupId": "cl126p75m001j2e6d73qmes0m",
           "options": {
             "name": "Shoot confettis",
-            "content": "postMessage({from: \"typebot\", action: \"shootConfettis\"}, \"*\")"
+            "content": "postMessage({from: \"liiska\", action: \"shootConfettis\"}, \"*\")"
           }
         },
         {
@@ -403,14 +403,14 @@
           "groupId": "cl126p75m001j2e6d73qmes0m",
           "type": "text",
           "content": {
-            "html": "<div>Let&#x27;s create your first typebot...</div>",
+            "html": "<div>Let&#x27;s create your first liiska...</div>",
             "richText": [
               {
                 "type": "p",
-                "children": [{ "text": "Let's create your first typebot..." }]
+                "children": [{ "text": "Let's create your first liiska..." }]
               }
             ],
-            "plainText": "Let's create your first typebot..."
+            "plainText": "Let's create your first liiska..."
           }
         },
         {
@@ -418,8 +418,8 @@
           "groupId": "cl126p75m001j2e6d73qmes0m",
           "type": "Code",
           "options": {
-            "name": "Go to typebot creation",
-            "content": "setTimeout(() => {window.location.href = \"https://app.typebot.io/typebots/create?isFirstBot=true\"}, 4000)"
+            "name": "Go to Liiska creation",
+            "content": "setTimeout(() => {window.location.href = \"https://app.liiska.io/liiskas/create?isFirstBot=true\"}, 4000)"
           }
         }
       ],
@@ -457,7 +457,7 @@
           "groupId": "cl126pv6w001n2e6dp0qkvthu",
           "options": {
             "name": "Store Other categories in DB",
-            "content": "postMessage({from: \"typebot\", action: \"storeOtherCategories\", content: {{Other categories}}}, \"*\")"
+            "content": "postMessage({from: \"liiska\", action: \"storeOtherCategories\", content: {{Other categories}}}, \"*\")"
           },
           "outgoingEdgeId": "cl128c0fu001a2e6droq69g6z"
         }
@@ -604,16 +604,16 @@
   "theme": {
     "chat": {
       "inputs": {
-        "color": "#303235",
-        "backgroundColor": "#FFFFFF",
-        "placeholderColor": "#9095A0"
+        "color": "#FFFFFF",
+        "backgroundColor": "#303235",
+        "placeholderColor": "#337dff"
       },
-      "buttons": { "color": "#FFFFFF", "backgroundColor": "#0042DA" },
-      "hostBubbles": { "color": "#303235", "backgroundColor": "#F7F8FF" },
-      "guestBubbles": { "color": "#FFFFFF", "backgroundColor": "#FF8E21" },
+      "buttons": { "color": "#FFFFFF", "backgroundColor": "#337dff" },
+      "hostBubbles": { "color": "#303235", "backgroundColor": "#337dff" },
+      "guestBubbles": { "color": "#FFFFFF", "backgroundColor": "#337dff" },
       "hostAvatar": {
         "isEnabled": true,
-        "url": "https://s3.eu-west-3.amazonaws.com/typebot/typebots/ckzp7a2za005809lczf2knzix/273013187_1315820332248257_6244778509534754615_n.jpg"
+        "url": "https://s3.eu-west-3.amazonaws.com/liiska/liiskas/ckzp7a2za005809lczf2knzix/273013187_1315820332248257_6244778509534754615_n.jpg"
       }
     },
     "general": { "font": "Open Sans", "background": { "type": "None" } }
@@ -629,6 +629,6 @@
     },
     "typingEmulation": { "speed": 300, "enabled": true, "maxDelay": 1.5 }
   },
-  "publicId": "typebot-onboarding",
+  "publicId": "liiska-onboarding",
   "customDomain": null
 }
