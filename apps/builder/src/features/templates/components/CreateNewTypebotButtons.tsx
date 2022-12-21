@@ -1,11 +1,4 @@
-import {
-  VStack,
-  Heading,
-  Stack,
-  Button,
-  useDisclosure,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import { VStack, Heading, Stack, Button, useDisclosure } from '@chakra-ui/react'
 import { ToolIcon, TemplateIcon, DownloadIcon } from '@/components/icons'
 import { Typebot } from 'models'
 import { useRouter } from 'next/router'
@@ -67,20 +60,14 @@ export const CreateNewTypebotButtons = () => {
 
   return (
     <VStack maxW="600px" w="full" flex="1" pt="20" spacing={10}>
-      <Heading>Create a new typebot</Heading>
+      <Heading>Create a new liisk</Heading>
       <Stack w="full" spacing={6}>
         <Button
           variant="outline"
           w="full"
           py="8"
           fontSize="lg"
-          leftIcon={
-            <ToolIcon
-              color={useColorModeValue('blue.500', 'blue.300')}
-              boxSize="25px"
-              mr="2"
-            />
-          }
+          leftIcon={<ToolIcon color="blue.500" boxSize="25px" mr="2" />}
           onClick={() => handleCreateSubmit()}
           isLoading={isLoading}
         >
@@ -91,13 +78,7 @@ export const CreateNewTypebotButtons = () => {
           w="full"
           py="8"
           fontSize="lg"
-          leftIcon={
-            <TemplateIcon
-              color={useColorModeValue('orange.500', 'orange.300')}
-              boxSize="25px"
-              mr="2"
-            />
-          }
+          leftIcon={<TemplateIcon color="orange.500" boxSize="25px" mr="2" />}
           onClick={onOpen}
           isLoading={isLoading}
         >
@@ -108,13 +89,7 @@ export const CreateNewTypebotButtons = () => {
           w="full"
           py="8"
           fontSize="lg"
-          leftIcon={
-            <DownloadIcon
-              color={useColorModeValue('purple.500', 'purple.300')}
-              boxSize="25px"
-              mr="2"
-            />
-          }
+          leftIcon={<DownloadIcon color="purple.500" boxSize="25px" mr="2" />}
           isLoading={isLoading}
           onNewTypebot={handleCreateSubmit}
         >
