@@ -106,7 +106,7 @@ export const StripeConfigModal = ({
               <FormLabel>Account name:</FormLabel>
               <Input
                 onChange={handleNameChange}
-                placeholder="Typebot"
+                placeholder="Liiska"
                 withVariableButton={false}
               />
             </FormControl>
