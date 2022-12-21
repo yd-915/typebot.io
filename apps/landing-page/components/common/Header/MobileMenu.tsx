@@ -29,7 +29,7 @@ export const MobileMenu = ({ isOpen }: Props) => (
         colorScheme="orange"
         fontWeight={700}
       >
-        Make a Liisk
+        Make a new Liisk
       </Button>
       <Button
         as={Link}
