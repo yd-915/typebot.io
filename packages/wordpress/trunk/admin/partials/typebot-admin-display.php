@@ -39,12 +39,12 @@
 
 </script>
 <div class="box" style="padding: 3rem; margin-top: 1rem; margin-right: 1rem; max-width: 800px">
-  <h1 class="title">Typebot Settings</h1>
-  <a style="text-decoration: underline" href="https://app.typebot.io/typebots" target="_blank">First, you need to create a Typebot with our builder. It's free.</a>
+  <h1 class="title">Liiska Settings</h1>
+  <a style="text-decoration: underline" href="https://app.liiska.io/liiskas" target="_blank">First, you need to make a liisk with our builder. It's free.</a>
   <form method="post" action="options.php" style="margin-top: 1rem">
     <?php
-    settings_fields('typebot');
-    do_settings_sections('typebot');
+    settings_fields('liiska');
+    do_settings_sections('liiska');
     ?>
       <div style="display: flex; flex-direction: column;">
         <label>
@@ -63,9 +63,9 @@
           echo esc_attr('none');
         } ?>; margin-top:0.5rem">
           <div class="field">
-            <label class="label">Your typebot URL</label>
+            <label class="label">Your liiska URL</label>
             <div class="control">
-              <input class="input" type="url" placeholder="Found in 'Share' page of your typebot" name="url" value="<?php echo esc_attr(
+              <input class="input" type="url" placeholder="Found in 'Share' page of your liiska" name="url" value="<?php echo esc_attr(
                 get_option('url')
               ); ?>">
             </div>
@@ -212,13 +212,13 @@
           </div>
           <?php if (esc_attr(get_option('embed_type')) === 'container'): ?>
           <div class="notification is-link" style="margin-bottom: 1rem;">
-            You can now place your typebot container anywhere in your site using [typebot] shortcode.
+            You can now place your liiska container anywhere in your site using [liiska] shortcode.
             <br><br>
             Your page templating system probably has a "Shortcode" element (if not, use a text element) where you can paste:
-            <pre>[typebot]</pre>
+            <pre>[liiska]</pre>
             <br>
-            Optionnaly, you can adjust `width`, `height`, `background-color` and/or `url` if you want to embed multiple typebots:
-            <pre>[typebot width="100%" height="500px" background-color="#F7F8FF" url="https://my.typebot.io"]</pre>
+            Optionnaly, you can adjust `width`, `height`, `background-color` and/or `url` if you want to embed multiple liiskas:
+            <pre>[liiska width="100%" height="500px" background-color="#F7F8FF" url="https://my.liiska.io"]</pre>
           </div>
         <?php endif; ?>
         </div>
@@ -238,7 +238,7 @@
         } else {
           echo esc_attr('none');
         } ?>">
-          <label>Paste the code from "HTML & Js" in Typebot in the Share tab:</label>
+          <label>Paste the code from "HTML & Js" in liiska in the Share tab:</label>
           <textarea class="textarea" style="margin-top:0.5rem" name="custom_code"><?php echo esc_attr(
             get_option('custom_code')
           ); ?></textarea>
