@@ -66,8 +66,8 @@ test.describe.parallel('Settings page', () => {
 
   test.describe('Metadata', () => {
     test('should be fillable', async ({ page }) => {
-      const favIconUrl = 'https://www.baptistearno.com/favicon.png'
-      const imageUrl = 'https://www.baptistearno.com/images/site-preview.png'
+      const favIconUrl = 'https://i.ibb.co/N2N16zw/Group-112.png'
+      const imageUrl = 'https://i.ibb.co/N2N16zw/Group-112.png'
       const typebotId = cuid()
       await importTypebotInDatabase(getTestAsset('typebots/settings.json'), {
         id: typebotId,
