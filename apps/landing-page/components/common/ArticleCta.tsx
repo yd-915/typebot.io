@@ -14,7 +14,7 @@ export const ArticleCallToAction = () => (
     >
       Make a Liisk
     </Button>
-    <Text fontSize="sm" fontStyle="italic" color="gray.600">
+    <Text fontSize="sm" fontStyle="italic" color="orange.600">
       It&apos;s free!
     </Text>
   </VStack>
