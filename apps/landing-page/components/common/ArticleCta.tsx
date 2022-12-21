@@ -8,7 +8,7 @@ export const ArticleCallToAction = () => (
     </Heading>
     <Button
       size="lg"
-      colorScheme="orange"
+      colorScheme="blue"
       as="a"
       href="https://app.typebot.io/register"
     >
