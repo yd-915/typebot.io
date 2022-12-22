@@ -18,7 +18,7 @@ export const parseTestTypebot = (
   id: cuid(),
   workspaceId: proWorkspaceId,
   folderId: null,
-  name: 'My typebot',
+  name: 'My liisks',
   theme: defaultTheme,
   settings: defaultSettings,
   publicId: null,
