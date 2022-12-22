@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { AvatarSideContainer } from './AvatarSideContainer'
 import { LinkedTypebot, useTypebot } from '../../providers/TypebotProvider'
@@ -60,11 +60,13 @@ export const ChatGroup = ({
     createEdge,
     apiHost,
     isPreview,
+    parentTypebotIds,
     onNewLog,
     injectLinkedTypebot,
     linkedTypebots,
     setCurrentTypebotId,
     pushEdgeIdInLinkedTypebotQueue,
+    pushParentTypebotId,
   } = useTypebot()
   const { resultValues, updateVariables, resultId } = useAnswers()
   const { scroll } = useChat()
@@ -131,6 +133,7 @@ export const ChatGroup = ({
         setCurrentTypebotId,
         pushEdgeIdInLinkedTypebotQueue,
         currentTypebotId,
+        pushParentTypebotId,
       })
       const isRedirecting =
         currentBlock.type === LogicBlockType.REDIRECT &&
@@ -156,6 +159,7 @@ export const ChatGroup = ({
           groups: typebot.groups,
           onNewLog,
           resultId,
+          parentTypebotIds,
         },
       })
       nextEdgeId ? onGroupEnd({ edgeId: nextEdgeId }) : displayNextBlock()
@@ -246,7 +250,7 @@ const ChatChunks = ({
 }: Props) => {
   const [isSkipped, setIsSkipped] = useState(false)
 
-  const avatarSideContainerRef = useRef<any>()
+  const avatarSideContainerRef = useRef<{ refreshTopOffset: () => void }>()
 
   useEffect(() => {
     refreshTopOffset()

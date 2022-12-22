@@ -1,7 +1,6 @@
 import { LinkedTypebot } from '@/providers/TypebotProvider'
 import { EdgeId, LogicState } from '@/types'
 import { TypebotLinkBlock, Edge, PublicTypebot } from 'models'
-import { byId } from 'utils'
 import { fetchAndInjectTypebot } from '../queries/fetchAndInjectTypebotQuery'
 
 export const executeTypebotLink = async (
@@ -18,6 +17,7 @@ export const executeTypebotLink = async (
     createEdge,
     setCurrentTypebotId,
     pushEdgeIdInLinkedTypebotQueue,
+    pushParentTypebotId,
     currentTypebotId,
   } = context
   const linkedTypebot = (
@@ -42,6 +42,7 @@ export const executeTypebotLink = async (
       edgeId: block.outgoingEdgeId,
       typebotId: currentTypebotId,
     })
+  pushParentTypebotId(currentTypebotId)
   setCurrentTypebotId(
     'typebotId' in linkedTypebot ? linkedTypebot.typebotId : linkedTypebot.id
   )

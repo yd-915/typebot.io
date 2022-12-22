@@ -1,4 +1,3 @@
-import { getLinkedTypebots } from '@/features/blocks/logic/typebotLink/api'
 import { ExecuteIntegrationResponse } from '@/features/chat'
 import { saveErrorLog, saveSuccessLog } from '@/features/logs/api'
 import { parseVariables } from '@/features/variables'
@@ -27,7 +26,7 @@ export const executeSendEmailBlock = async (
   const { variables } = typebot
   await sendEmail({
     typebotId: typebot.id,
-    resultId: result.id,
+    resultId: result?.id,
     credentialsId: options.credentialsId,
     recipients: options.recipients.map(parseVariables(variables)),
     subject: parseVariables(variables)(options.subject ?? ''),
@@ -60,7 +59,7 @@ const sendEmail = async ({
   fileUrls,
 }: SendEmailOptions & {
   typebotId: string
-  resultId: string
+  resultId?: string
   fileUrls?: string
 }) => {
   const { name: replyToName } = parseEmailRecipient(replyTo)
@@ -115,7 +114,7 @@ const sendEmail = async ({
     ...emailBody,
   }
   try {
-    const info = await transporter.sendMail(email)
+    await transporter.sendMail(email)
     await saveSuccessLog({
       resultId,
       message: 'Email successfully sent',
@@ -170,7 +169,7 @@ const getEmailBody = async ({
   resultId,
 }: {
   typebotId: string
-  resultId: string
+  resultId?: string
 } & Pick<SendEmailOptions, 'isCustomBody' | 'isBodyCode' | 'body'>): Promise<
   { html?: string; text?: string } | undefined
 > => {
@@ -183,13 +182,12 @@ const getEmailBody = async ({
     where: { typebotId },
   })) as unknown as PublicTypebot
   if (!typebot) return
-  const linkedTypebots = await getLinkedTypebots(typebot)
   const resultValues = (await prisma.result.findUnique({
     where: { id: resultId },
     include: { answers: true },
   })) as ResultValues | null
   if (!resultValues) return
-  const answers = parseAnswers(typebot, linkedTypebots)(resultValues)
+  const answers = parseAnswers(typebot, [])(resultValues)
   return {
     html: render(
       <DefaultBotNotificationEmail
