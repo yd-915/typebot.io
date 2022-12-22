@@ -39,7 +39,7 @@ export const LiteBadge = () => {
       style={{ bottom: '20px' }}
       id="lite-badge"
     >
-      Made with <span className="text-blue-500">Typebot</span>.
+      Made by <span className="text-blue-500">Liiska</span>.
     </a>
   )
 }
