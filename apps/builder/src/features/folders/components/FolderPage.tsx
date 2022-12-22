@@ -24,7 +24,7 @@ export const FolderPage = () => {
 
   return (
     <Stack minH="100vh">
-      <Seo title="My typebots" />
+      <Seo title="My liisks" />
       <DashboardHeader />
       <TypebotDndProvider>
         {!folder ? (
