@@ -24,7 +24,7 @@ describe('openBubble', () => {
       url: 'https://typebot.io/typebot-id',
       proactiveMessage: {
         textContent: 'Hi click here!',
-        avatarUrl: 'https://website.com/my-avatar.png',
+        avatarUrl: 'https://i.ibb.co/vk3gjyx/point.png',
       },
     })
     const bubble = document.getElementById('typebot-bubble') as HTMLDivElement
