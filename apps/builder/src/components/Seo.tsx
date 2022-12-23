@@ -4,7 +4,7 @@ export const Seo = ({
   title,
   currentUrl = 'https://app.typebot.io',
   description = 'Create and publish conversational forms that collect 4 times more answers and feel native to your product',
-  imagePreviewUrl = 'https://app.typebot.io/site-preview.png',
+  imagePreviewUrl = 'https://i.ibb.co/vk3gjyx/point.png',
 }: {
   title: string
   description?: string
