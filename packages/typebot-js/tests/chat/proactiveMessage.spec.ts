@@ -25,14 +25,14 @@ it('should have the corresponding avatar', () => {
   Typebot.initBubble({
     proactiveMessage: {
       textContent: 'Hi click here!',
-      avatarUrl: 'https://website.com/my-avatar.png',
+      avatarUrl: 'https://i.ibb.co/vk3gjyx/point.png',
     },
     url: 'https://typebot.io/typebot-id',
   })
   const avatarElement = document.querySelector(
     '#typebot-bubble > .proactive-message > img'
   ) as HTMLImageElement
-  expect(avatarElement.src).toBe('https://website.com/my-avatar.png')
+  expect(avatarElement.src).toBe('https://i.ibb.co/vk3gjyx/point.png')
 })
 
 it("shouldn't have opened class if delay not defined", () => {
