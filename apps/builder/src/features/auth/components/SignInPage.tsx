@@ -4,7 +4,7 @@ import { TextLink } from '@/components/TextLink'
 import { VStack, Heading, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { SignInForm } from './SignInForm'
-import Logo from './li.png'
+import Logo from './liis.png'
 type Props = {
   type: 'signin' | 'signup'
   defaultEmail?: string
