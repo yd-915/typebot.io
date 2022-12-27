@@ -165,7 +165,7 @@ export const TypebotButton = ({
         <ConfirmModal
           message={
             <Text>
-              Are you sure you want to delete your Typebot &quot;{typebot.name}
+              Are you sure you want to delete your Liisk &quot;{typebot.name}
               &quot;.
               <br />
               All associated data will be lost.
